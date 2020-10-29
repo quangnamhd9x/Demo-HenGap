@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ai Là Triệu Phú 2020</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body id="bodyPage2">
+<div>
+   <h2 class="btn btn-outline-warning" style="font-size: 30px; width: 370px; border-radius: 10px; height: 50px; margin-left: 20px; margin-top: 20px">
+     Thời gian còn lại: <span id="timeCountDown"></span>
+   </h2>
+</div>
+<div style="width: 300px; margin-top: 20px; margin-left: 10px; border-radius: 5px; text-align: center" class="btn-warning" id='point'>
+    <h2 id="result"></h2>
+</div>
+<div id="img"></div>
+<div align="center">
+    <a style="font-size: 80px; border-radius: 20px; color: white" class="btn btn-primary"><b>Ai Là Triệu Phú</b></a><br>
+</div>
+<div style="margin-top: 200px">
+    <table align="center" style="width: 1000px; height: 300px;border-radius: 10px" class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th style="font-size: 30px" scope="col" id="question" colspan="2"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="border: 1px solid white" id="answer1" class="btn-info tdShow" onclick="checkAnswer(id)">asw1</td>
+            <td style="border: 1px solid white" id="answer2" class="btn-info tdShow" onclick="checkAnswer(id)">asw2</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid white" id="answer3" class="btn-info tdShow" onclick="checkAnswer(id)">asw3</td>
+            <td style="border: 1px solid white" id="answer4" class="btn-info tdShow" onclick="checkAnswer(id)">asw4</td>
+        </tr>
+        </tbody>
+    </table>
+    <p id="sound"></p>
+</div>
+<script src="js/Questions.js"></script>
+<script src="Sounds.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</html>
