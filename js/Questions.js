@@ -1,6 +1,6 @@
 class Question {                                                //tạo đối lớp chứa các thuộc tính
-    constructor(listAnswer, answer, correctAnswer, money) {
-        this.listAnswer = listAnswer;
+    constructor(content, answer, correctAnswer, money) {
+        this.content = content;
         this.answer = answer;
         this.correctAnswer = correctAnswer;
         this.money = money;
@@ -45,7 +45,7 @@ let getQuestion = document.getElementById('question');     // lấy câu hỏi b
 
 function showQuestion(question_1) {                             // mặc định show question 1 trong mảng Question
     timeCount = 15;
-    getQuestion.innerHTML = question_1.listAnswer;                // lấy question 1 trong listAnswer
+    getQuestion.innerHTML = question_1.content;                // lấy question 1 trong content
     getQuestion.setAttribute("indexQuestion", questions.indexOf(question_1));
     for (let i = 0; i < 10; i++) {
         let getAnswer = document.getElementById('answer' + (i + 1));   // i bắt đầu từ 0 nên +1 cho hợp lý :))
@@ -56,7 +56,7 @@ function showQuestion(question_1) {                             // mặc định
 showQuestion(question1);
 
 function checkAnswer(id) {                                  //gọi hàm check giá trị id
-    musicbackground.innerHTML = soundTrue.getSound();                   //nhạc nền mới vào game
+    musicBackground.innerHTML = soundTrue.getSound();                   //nhạc nền mới vào game
     let answer = document.getElementById(id).innerHTML;                 //gọi biến kết quả theo checkAnswer(id) bên html  ví dụ câu 1 thì answer = A.12
     let getQuestionId = document.getElementById('question');    // lấy id câu hỏi tương ứng question1 là id = 1
     let indexQuestion = parseInt(getQuestionId.getAttribute("indexQuestion")); // lấy index câu hỏi tương ứng vị trí câu hỏi trong mảng question ví dụ question1 là index = 0;
@@ -69,7 +69,7 @@ console.log(answer)
         document.getElementById('result').innerHTML = "Tiền thưởng: " + "<b>" + (questions[indexQuestion].money) + "</b>";
 
         if (indexQuestion === 10) {                             // nếu chơi đến câu hỏi 10 tại vị trí thứ 10 và > index 9 trong mảng questions là win tất
-            musicbackground.innerHTML = musicWinAll.getSound()
+            musicBackground.innerHTML = musicWinAll.getSound()
             alert("Bạn thật xuất sắc, chúc mừng bạn đã vượt qua toàn bộ câu hỏi <3");
             timeCount = 1
             // window.reload();
@@ -77,7 +77,7 @@ console.log(answer)
         next(indexQuestion);
         timeCount = 15;
     } else {
-        musicbackground.innerHTML = soundFalse.getSound();
+        musicBackground.innerHTML = soundFalse.getSound();
         alert('Sai mất rồi! chơi lại nào :)');
         reload();
     }

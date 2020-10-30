@@ -31,5 +31,5 @@ let soundBackground = new Sounds(soundBG);
 let soundTrue = new Sounds(soundPass);
 let soundFalse = new Sounds(soundWrong);
 let musicWinAll = new Sounds(soundWin)
-let musicbackground = document.getElementById('sound')
-musicbackground.innerHTML = soundBackground.getSound();
+let musicBackground = document.getElementById('sound')
+musicBackground.innerHTML = soundBackground.getSound();
